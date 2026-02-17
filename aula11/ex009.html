@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ex009</h1>
+
+    País: <input type="text" name="country" id="country">
+    <button onclick="mostrarTexto()">executar</button>
+    <div id="res"></div>
+    <script>
+        function mostrarTexto() {
+            var txtcountry = window.document.getElementById('country')
+            var country = txtcountry.value
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Vivendo em ${country}</p>`
+            if (country.toLowerCase() == 'brasil') {
+                res.innerHTML += 'Você é Brasileiro!'
+                res.style.background = 'yellow'
+                res.style.color = 'green'
+            } else {
+                res.innerHTML += 'Você é Estrangeiro!'
+                res.style.background = 'blue'
+                res.style.color = 'white'
+            }
+        }
+    </script>
+</body>
+</html>
