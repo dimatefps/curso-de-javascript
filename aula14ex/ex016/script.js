@@ -14,9 +14,9 @@ function calcular(){
 
     var texto = "Contando: \n"
     for (var i = Number(inicio); i <= Number(fim); i += Number(passo)){
-        texto += `${i} 👉`
+        texto += `${i} \u{1f449}`
     }
-    texto += '🏁'
+    texto += '\u{1f3c1}'
 
     res.innerHTML = ''
     res.innerHTML = texto
